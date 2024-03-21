@@ -6,7 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{99B23FDD-C999-491C-996E-6BF59D314449}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		LICENSE.md = LICENSE.md
 		nuget.config = nuget.config
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "LabelMaker", "src\LabelMaker\LabelMaker.fsproj", "{9CDC8A6F-F8B3-4297-A4B4-7537769CE49A}"
