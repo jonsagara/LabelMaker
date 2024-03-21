@@ -13,7 +13,7 @@ module Program =
         // * Pull requests: read and write (a pull request is still an issue)
         let token = ""
         
-        GitHubApi.createPriorityLabelsAsync owner repo token
+        GitHubApi.createLabelsAsync owner repo token
         |> Async.AwaitTask
         |> Async.RunSynchronously
 

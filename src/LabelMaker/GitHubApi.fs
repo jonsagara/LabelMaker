@@ -60,7 +60,7 @@ module GitHubApi =
 
 
     /// Create the priority-1 through priority-5 labels in the repo.
-    let createPriorityLabelsAsync (owner : string) (repo : string) (token : string) =
+    let createLabelsAsync (owner : string) (repo : string) (token : string) =
         task {
             ArgumentException.ThrowIfNullOrWhiteSpace(owner, nameof owner)
             ArgumentException.ThrowIfNullOrWhiteSpace(repo, nameof repo)
@@ -85,7 +85,7 @@ module GitHubApi =
             //   label in GitHub.
             //
 
-            for newLabel in Data.NewLabels.Where(fun pl -> not(existingLabelNames.Contains(pl.Name))) do
+            for newLabel in Data.NewLabels.Where(fun nl -> not(existingLabelNames.Contains(nl.Name))) do
 
                 printfn $"Creating label with name {newLabel.Name}, color {newLabel.Color}, and description {newLabel.Description}..."
                 let! responseText = createLabelAsync owner repo token newLabel
