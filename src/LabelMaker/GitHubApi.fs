@@ -15,7 +15,7 @@ module GitHubApi =
         httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("LabelMaker/1.0")
         httpClient
 
-    // Storing this in a static field is okay because it's a utility that runs one, not a server application that runs 
+    // Storing this in a static field is okay because it's a utility that runs once, not a server application that runs 
     //   continuously. If it were the latter, we'd use .NET DI and let it handle the HttpClient lifetime.
     let private _httpClient = initHttpClient()
 
